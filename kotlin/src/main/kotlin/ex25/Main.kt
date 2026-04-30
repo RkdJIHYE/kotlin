@@ -1,4 +1,5 @@
-package com.back.ex24
+package com.back.ex25
+
 
 class Person(
     var name: String = "",
@@ -22,4 +23,13 @@ fun main(){
     }
 
     person2.printInfo()
+
+    val rst2 = Person().apply{
+        name = "Alice"
+        age = 25
+    }.let{
+        it.age +10
+    }
+
+    println(rst2)
 }
